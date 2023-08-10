@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Run the Betty linter on the C file
+betty "$CFILE"
+
+# Run the C file through the preprocessor and save the result to the output file
+gcc -E "$CFILE" -o c
+
