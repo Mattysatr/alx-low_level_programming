@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - prints all possible combinations of single-digit numbers
-* Return: Always 0 (success)
-*/
+ * main - prints all possible combinations of single-digit numbers
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
 int n;
@@ -14,9 +14,9 @@ putchar(n);
 if (n != 57)
 {
 putchar(',');
-putchar('');
+putchar(' ');
 }
 }
-putcharz9('\n');
+putchar('\n');
 return (0);
 }
