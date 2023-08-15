@@ -1,23 +1,20 @@
-i#include <_putchar.c>
-
+#include "main.h"
 /**
-* print_putchar - Fuction to print _putcher followed by a new line
-*
-* This function prints each character of the word "_putchar"
-* followed by a newline character using the _putchar function.
-*/
+ * main - print _putchar
+ * is written by mbah
+ * Return: 0
+ */
 
-print_putcher(void)
+int main(void)
 {
-/*calling _putcher to print each character*/
 _putchar('_');
 _putchar('p');
-_putchar('u);
-_putchar('t);
+_putchar('u');
+_putchar('t');
 _putchar('c');
 _putchar('h');
 _putchar('a');
 _putchar('r');
-
+_putchar('\n');
 return (0);
 }
