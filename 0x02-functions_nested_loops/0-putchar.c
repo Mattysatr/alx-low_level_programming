@@ -1,4 +1,4 @@
-i#include <stdio.h>
+i#include <_putchar.c>
 
 /**
 * print_putchar - Fuction to print _putcher followed by a new line
@@ -19,6 +19,5 @@ _putchar('h');
 _putchar('a');
 _putchar('r');
 
-/* Printing a newline character */
-_putchar('\n');
+return (0);
 }
