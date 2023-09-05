@@ -5,20 +5,18 @@
  * void free_grid - frees two dimension grid
  * @grid: two dimensional grid allocation
  * @height: height dimension of grid
- * Description: frees grid memory
+ * Description: frees grid for memory allocation
  * Return: nothing
  *
  */
 
 void free_grid(int **grid, int height)
 {
-if (grid == NULL)
-return;
+int i;
 
-for (int i = 0; i < height; i++)
+for (i = 0; i < height; i++)
 {
 free(grid[i]);
 }
-
 free(grid);
 }
