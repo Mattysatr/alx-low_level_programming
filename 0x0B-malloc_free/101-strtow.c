@@ -27,7 +27,6 @@ b++;
 
 return (b);
 }
-
 /**
  * **strtow - splits strings into words
  * @str: string split
