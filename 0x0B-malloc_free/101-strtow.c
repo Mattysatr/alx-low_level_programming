@@ -2,42 +2,42 @@
 #include "main.h"
 
 /**
- * count_word - function to help count the number of words present
+ * count_word - function to carry out words counting in a string
  * @s: string evaluation
  *
- * Return: word number count
+ * Return: number of words
  */
 int count_word(char *s)
 {
-int flag, a, b;
+int flag, c, w;
 
 flag = 0;
-b = 0;
+w = 0;
 
-for (a = 0; s[a] != '\0'; a++)
+for (c = 0; s[c] != '\0'; c++)
 {
-if (s[a] == ' ')
+if (s[c] == ' ')		
 flag = 0;
 else if (flag == 0)
 {
 flag = 1;
-b++;
+w++;
 }
 }
 
-return (b);
+return (w);
 }
 /**
- * **strtow - splits strings into words
+ * **strtow - splits the string into words format
  * @str: string split
  *
- * Return: pointer to a strings array (Success)
+ * Return: point to an string arrays (Success)
  * or NULL (Error)
  */
 char **strtow(char *str)
 {
 char **matrix, *tmp;
-int i, k = 0, len = 0, words, d = 0, start, end;
+int i, k = 0, len = 0, words, c = 0, start, end;
 
 while (*(str + len))
 len++;
@@ -53,22 +53,21 @@ for (i = 0; i <= len; i++)
 {
 if (str[i] == ' ' || str[i] == '\0')
 {
-if (d)
+if (c)
 {
 end = i;
-	
 tmp = (char *) malloc(sizeof(char) * (c + 1));
 if (tmp == NULL)
 return (NULL);
 while (start < end)
 *tmp++ = str[start++];
 *tmp = '\0';
-matrix[k] = tmp - d;
+matrix[k] = tmp - c;
 k++;
 c = 0;
 }
 }
-else if (d++ == 0)
+else if (c++ == 0)
 start = i;
 }
 
